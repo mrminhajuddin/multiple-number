@@ -1,0 +1,62 @@
+import math
+
+print("=== Scientific Calculator ===")
+print("1. Addition (+)")
+print("2. Subtraction (-)")
+print("3. Multiplication (*)")
+print("4. Division (/)")
+print("5. Power (x^y)")
+print("6. Square Root (√x)")
+print("7. Sin")
+print("8. Cos")
+print("9. Tan")
+print("10. Log (base 10)")
+print("11. Natural Log (ln)")
+print("12. Factorial")
+
+choice = int(input("Enter your choice (1-12): "))
+
+if choice in [1, 2, 3, 4, 5]:
+    a = float(input("Enter first number: "))
+    b = float(input("Enter second number: "))
+
+    if choice == 1:
+        print("Result:", a + b)
+    elif choice == 2:
+        print("Result:", a - b)
+    elif choice == 3:
+        print("Result:", a * b)
+    elif choice == 4:
+        print("Result:", a / b)
+    elif choice == 5:
+        print("Result:", a ** b)
+
+elif choice == 6:
+    x = float(input("Enter number: "))
+    print("Result:", math.sqrt(x))
+
+elif choice in [7, 8, 9]:
+    angle = float(input("Enter angle in degrees: "))
+    rad = math.radians(angle)
+
+    if choice == 7:
+        print("Sin:", math.sin(rad))
+    elif choice == 8:
+        print("Cos:", math.cos(rad))
+    elif choice == 9:
+        print("Tan:", math.tan(rad))
+
+elif choice == 10:
+    x = float(input("Enter number: "))
+    print("Log10:", math.log10(x))
+
+elif choice == 11:
+    x = float(input("Enter number: "))
+    print("Ln:", math.log(x))
+
+elif choice == 12:
+    x = int(input("Enter number: "))
+    print("Factorial:", math.factorial(x))
+
+else:
+    print("Invalid choice")
